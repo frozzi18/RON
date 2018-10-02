@@ -2,7 +2,7 @@
   <div class="home">
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
-      <div class="w3-bar w3-black w3-wide w3-padding w3-card">
+      <div class="w3-bar w3-black w3-wide w3-padding w3-card menu">
         <router-link to="/"><a class="w3-bar-item w3-button no-underline"><b>DRY SEED</b></a></router-link>
         <!-- Float links to the right. Hide them on small screens -->
         <div class="w3-right w3-hide-small">
@@ -24,7 +24,7 @@
         </div> -->
       <!-- </div> -->
 
-      <div class="w3-row-padding w3-padding-32">
+      <div class="w3-row-padding w3-padding-32 menu">
         <div class="w3-col l1 m2 s12 w3-margin-bottom">
           <div class="w3-display-container w3-left">
             <button class="w3-button w3-black box-radius">ALL</button>
@@ -45,19 +45,19 @@
         <div class="w3-col l4 m6 w3-margin-bottom">
           <div class="w3-display-container">
             <img src="../assets/Ceremony-Coffee-Roasters-thumb.png" alt="House" style="width:100%">
-            <h3>Super Offers</h3>
+            <span class="body-18px">Super Offers</span>
           </div>
         </div>
         <div class="w3-col l4 m6 w3-margin-bottom">
           <div class="w3-display-container">
             <img src="../assets/death-wish-coffee-thumb.png" alt="House" style="width:100%">
-            <h3>Super Offers</h3>
+            <span class="body-18px">Super Offers</span>
           </div>
         </div>
         <div class="w3-col l4 m6 w3-margin-bottom">
           <div class="w3-display-container">
             <img src="../assets/Google-Home-Mini-Donut-Shop-thumb.png" alt="House" style="width:100%">
-            <h3>Super Offers</h3>
+            <span class="body-18px">Super Offers</span>
           </div>
         </div>
     <!-- </div> -->
@@ -66,13 +66,13 @@
         <div class="w3-col l4 m6 w3-margin-bot3om">
           <div class="w3-display-container">
             <img src="../assets/MonkeyLearn-thumb.png" alt="House" style="width:100%">
-            <h3>Super Offers</h3>
+            <span class="body-18px">Super Offers</span>
           </div>
         </div>
         <div class="w3-col l4 m6 w3-margin-bottom">
           <div class="w3-display-container">
              <img src="../assets/Maison-Riviera-thumb.png" alt="House" style="width:100%">
-            <h3>Super Offers</h3>
+            <span class="body-18px">Super Offers</span>
           </div>
         </div>
      <!-- </div> -->
@@ -81,26 +81,26 @@
         <div class="w3-col l4 m6 w3-margin-bottom">
           <div class="w3-display-container">
             <img src="../assets/MonkeyLearn-thumb.png" alt="House" style="width:100%">
-            <h3>Super Offers</h3>
+            <span class="body-18px">Super Offers</span>
           </div>
         </div>
         <div class="w3-col l4 m6 w3-margin-bottom">
           <div class="w3-display-container">
             <img src="../assets/nello-thumb.png" alt="House" style="width:100%">
-            <h3>Super Offers</h3>
+            <span class="body-18px">Super Offers</span>
           </div>
         </div>
         <div class="w3-col l4 m6 w3-margin-bottom">
           <div class="w3-display-container">
              <img src="../assets/netguru-design-process-thumb.png" alt="House" style="width:100%">
-            <h3>Super Offers</h3>
+            <span class="body-18px">Super Offers</span>
           </div>
         </div>
      </div>
  <!-- End page content -->
     </div>
     <footer class="w3-center w3-light-grey w3-padding-32">
-      <p>2018 Dryseed</p>
+      <span class="caption">2018 Dryseed</span>
     </footer>
 
   </div>

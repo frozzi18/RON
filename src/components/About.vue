@@ -2,7 +2,7 @@
   <div class="about">
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
-      <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+      <div class="w3-bar w3-white w3-wide w3-padding w3-card menu">
         <router-link to="/"><a class="w3-bar-item w3-button no-underline"><b>DRY SEED</b></a></router-link>
         <!-- Float links to the right. Hide them on small screens -->
         <div class="w3-right w3-hide-small">
@@ -111,7 +111,7 @@
         <div class="w3-col l2 m5 w3-margin-bottom">
           <div class="w3-display-container w3-left-align">
             <h3>Research</h3>
-            <p>We always put business goal above all in creating a website. Therefore, we do research before we do anything else.</p>           
+            <p>We always put business goal above all in creating a website. Therefore, we do research before we do anything else.</p>
           </div>
         </div>
         <div class="w3-col l2 m1 w3-margin-bottom">
@@ -122,7 +122,7 @@
         <div class="w3-col l2 m5 w3-margin-bottom">
           <div class="w3-display-container w3-left-align">
             <h3>Research</h3>
-            <p>We always put business goal above all in creating a website. Therefore, we do research before we do anything else.</p>            
+            <p>We always put business goal above all in creating a website. Therefore, we do research before we do anything else.</p>
           </div>
         </div>
         <div class="w3-col l2 m0 w3-margin-bottom">
@@ -157,7 +157,6 @@
              <div class="w3-display-container w3-left-align">
                <h3>Phone</h3>
                <p>+62 8000 0000</p>
-               <a href="#home" class="w3-button w3-black"></i>To the top</a>            <!-- <h3>Super Offers</h3> -->
              </div>
            </div>
            <div class="w3-col l1 m1 w3-margin-bottom">
@@ -177,11 +176,9 @@
               </div>
              </div>
            </div>
-           
-        </div>
-        
+         </div>
       </div>
-       <p>2018 Dryseed</p>
+       <span class="caption">2018 Dryseed</span>
     </footer>
 
   </div>
