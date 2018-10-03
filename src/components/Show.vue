@@ -20,11 +20,11 @@
         <h3 class="w3-text-grey w3-large"><a href="#about"><span class="body-18px">See in full size</span></a></h3>
       </div>
       <div class="w3-col l4 w3-container w3-xlarge w3-text-grey w3-left-align">
-        <h3 class="w3-text-black"><span class="headline-normal">Ceremony Coffe Roasters</span></h3>
-        <p><span class="body-18px">We build design teams
-        - we break things down and build it better
-        - we deliver the best of solutions</span></p>
-        <p><span class="body-18px">InShock means powerfull simplicity</span></p>
+        <h3 class="w3-text-black"><span class="headline-normal">{{ users[0].name}}</span></h3>
+        <span class="body-18px">{{description_1}}</span>
+        <br>
+        <br>
+        <span class="body-18px">{{description_2}}</span>
       </div>
       </div>
 
@@ -38,66 +38,11 @@
       </div>
 
       <div class="w3-row-padding">
-        <div class="w3-col l4 m6 w3-margin-bottom">
+        <div class="w3-col l4 m6 w3-margin-bottom" v-for="user in users" :key="user.id">
           <div class="w3-display-container">
             <!-- <div class="w3-display-topleft w3-black w3-padding">Summer House</div> -->
-            <img src="../assets/Ceremony-Coffee-Roasters-thumb.png" alt="House" style="width:100%">
-            <span class="body-18px">Super Offers</span>
-          </div>
-        </div>
-        <div class="w3-col l4 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <!-- <div class="w3-display-topleft w3-black w3-padding">Brick House</div> -->
-            <img src="../assets/death-wish-coffee-thumb.png" alt="House" style="width:100%">
-            <span class="body-18px">Super Offers</span>
-          </div>
-        </div>
-        <div class="w3-col l4 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <!-- <div class="w3-display-topleft w3-black w3-padding">Renovated</div> -->
-            <img src="../assets/Google-Home-Mini-Donut-Shop-thumb.png" alt="House" style="width:100%">
-            <span class="body-18px">Super Offers</span>
-          </div>
-        </div>
-    <!-- </div> -->
-
-      <!-- <div class="w3-row-padding"> -->
-        <div class="w3-col l4 m6 w3-margin-bot3om">
-          <div class="w3-display-container">
-            <!-- <div class="w3-display-topleft w3-black w3-padding">Summer House</div> -->
-            <img src="../assets/MonkeyLearn-thumb.png" alt="House" style="width:100%">
-            <span class="body-18px">Super Offers</span>
-          </div>
-        </div>
-        <div class="w3-col l4 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <!-- <div class="w3-display-topleft w3-black w3-padding">Renovated</div> -->
-            <img src="../assets/Maison-Riviera-thumb.png" alt="House" style="width:100%">
-            <span class="body-18px">Super Offers</span>
-          </div>
-        </div>
-     <!-- </div> -->
-
-      <!-- <div class="w3-row-padding"> -->
-        <div class="w3-col l4 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <!-- <div class="w3-display-topleft w3-black w3-padding">Summer House</div> -->
-            <img src="../assets/MonkeyLearn-thumb.png" alt="House" style="width:100%">
-            <span class="body-18px">Super Offers</span>
-          </div>
-        </div>
-        <div class="w3-col l4 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <!-- <div class="w3-display-topleft w3-black w3-padding">Brick House</div> -->
-            <img src="../assets/nello-thumb.png" alt="House" style="width:100%">
-            <span class="body-18px">Super Offers</span>
-          </div>
-        </div>
-        <div class="w3-col l4 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <!-- <div class="w3-display-topleft w3-black w3-padding">Renovated</div> -->
-            <img src="../assets/netguru-design-process-thumb.png" alt="House" style="width:100%">
-            <span class="body-18px">Super Offers</span>
+            <img :src="require(`../assets/${user.url}`)" alt="House" style="width:100%">
+            <span class="body-18px">{{ user.name}}</span>
           </div>
         </div>
      </div>
@@ -109,16 +54,32 @@
 
   </div>
 </template>
+<!-- http://localhost:8080/static/img/death-wish-coffee-thumb.c685fde.png -->
+<!-- http://localhost:8080/static/img/Ceremony-Coffee-Roasters-thumb.png -->
 
 <script>
 export default {
-  name: 'Show',
+  name: 'show',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      description_1: 'Suara bulan merdu digarasi yang basah. Petikan sitar yang lincah dalam tentak tabu, kau sungguh kontras malam ini. Mengalun disela rintik rindu yang sengit, menarilah denganku.',
+      description_2: 'Pesanku pada malam-malam yang tenang dan sunyi. Mintalah lewat doa yang kau ucap dengan mesra. Ialah Sang Maha, Pelukan-Nya menyentuh sukma',
+      users: [
+        { name: 'Ceremony Coffe Roaste', url: 'Ceremony-Coffee-Roasters-thumb.png' },
+        { name: 'Death Wish Coffe', url: 'death-wish-coffee-thumb.png' },
+        { name: 'Maison Riviera', url: 'Maison-Riviera-thumb.png' },
+        { name: 'Recipelist', url: 'Recipelist-thumb.png' },
+        { name: 'Google Home Mini', url: 'Google-Home-Mini-Donut-Shop-thumb.png' },
+        { name: 'J&T Real Estate', url: 'J-T-Real-Estate-thumb.png' },
+        { name: 'Monkey Learn', url: 'MonkeyLearn-thumb.png' },
+        { name: 'Nello', url: 'nello-thumb.png' },
+        { name: 'Net Guru Design Process', url: 'netguru-design-process-thumb.png' }
+      ]
     }
   }
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

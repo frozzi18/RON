@@ -42,58 +42,11 @@
     </div>
 
       <div class="w3-row-padding">
-        <div class="w3-col l4 m6 w3-margin-bottom">
+        <div class="w3-col l4 m6 w3-margin-bottom" v-for="user in users" :key="user.id">
           <div class="w3-display-container">
-            <img src="../assets/Ceremony-Coffee-Roasters-thumb.png" alt="House" style="width:100%">
-            <span class="body-18px">Super Offers</span>
-          </div>
-        </div>
-        <div class="w3-col l4 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <img src="../assets/death-wish-coffee-thumb.png" alt="House" style="width:100%">
-            <span class="body-18px">Super Offers</span>
-          </div>
-        </div>
-        <div class="w3-col l4 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <img src="../assets/Google-Home-Mini-Donut-Shop-thumb.png" alt="House" style="width:100%">
-            <span class="body-18px">Super Offers</span>
-          </div>
-        </div>
-    <!-- </div> -->
-
-      <!-- <div class="w3-row-padding"> -->
-        <div class="w3-col l4 m6 w3-margin-bot3om">
-          <div class="w3-display-container">
-            <img src="../assets/MonkeyLearn-thumb.png" alt="House" style="width:100%">
-            <span class="body-18px">Super Offers</span>
-          </div>
-        </div>
-        <div class="w3-col l4 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-             <img src="../assets/Maison-Riviera-thumb.png" alt="House" style="width:100%">
-            <span class="body-18px">Super Offers</span>
-          </div>
-        </div>
-     <!-- </div> -->
-
-      <!-- <div class="w3-row-padding"> -->
-        <div class="w3-col l4 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <img src="../assets/MonkeyLearn-thumb.png" alt="House" style="width:100%">
-            <span class="body-18px">Super Offers</span>
-          </div>
-        </div>
-        <div class="w3-col l4 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-            <img src="../assets/nello-thumb.png" alt="House" style="width:100%">
-            <span class="body-18px">Super Offers</span>
-          </div>
-        </div>
-        <div class="w3-col l4 m6 w3-margin-bottom">
-          <div class="w3-display-container">
-             <img src="../assets/netguru-design-process-thumb.png" alt="House" style="width:100%">
-            <span class="body-18px">Super Offers</span>
+            <!-- <div class="w3-display-topleft w3-black w3-padding">Summer House</div> -->
+            <img :src="require(`../assets/${user.url}`)" alt="House" style="width:100%">
+            <span class="body-18px">{{ user.name}}</span>
           </div>
         </div>
      </div>
@@ -111,7 +64,18 @@ export default {
   name: 'Home',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      users: [
+        { name: 'Ceremony Coffe Roaste', url: 'Ceremony-Coffee-Roasters-thumb.png' },
+        { name: 'Death Wish Coffe', url: 'death-wish-coffee-thumb.png' },
+        { name: 'Maison Riviera', url: 'Maison-Riviera-thumb.png' },
+        { name: 'Recipelist', url: 'Recipelist-thumb.png' },
+        { name: 'Google Home Mini', url: 'Google-Home-Mini-Donut-Shop-thumb.png' },
+        { name: 'J&T Real Estate', url: 'J-T-Real-Estate-thumb.png' },
+        { name: 'Monkey Learn', url: 'MonkeyLearn-thumb.png' },
+        { name: 'Nello', url: 'nello-thumb.png' },
+        { name: 'Net Guru Design Process', url: 'netguru-design-process-thumb.png' }
+      ]
     }
   }
 }
