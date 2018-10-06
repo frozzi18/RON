@@ -33,6 +33,14 @@ export default {
   line-height: 90px;
 }
 
+.headline-medium-title {
+  font-family: 'Montserrat';
+  font-weight:400;
+  font-size: 20px;
+  letter-spacing: .16px;
+  line-height: 28px;
+}
+
 .headline-big {
   font-family: 'Montserrat';
   font-weight:400;
@@ -164,5 +172,128 @@ export default {
   font-size: 12px;
   letter-spacing: 1px;
   line-height: 20px;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.margin-top-navbar{
+  padding-top: 25px;
+}
+
+.height-navbar {
+  height: 80px;
+}
+
+.cool-link {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+
+}
+
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    margin-top: 18px;
+    transition: width .3s;
+}
+
+.cool-link:hover::after {
+    width: 100%;
+    //transition: width .3s;
+}
+
+.cool-link-2 {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+
+}
+
+.cool-link-2::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    margin-top: 18px;
+    transition: width .3s;
+}
+
+.cool-link-2:hover::after {
+    width: 100%;
+    //transition: width .3s;
+}
+
+.active {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+
+}
+
+.active::after {
+    content: '';
+    display: block;
+    /*width: 0;*/
+    height: 2px;
+    background: black;
+    margin-top: 18px;
+    transition: width .3s;
+}
+
+.active:hover::after {
+    width: 100%;
+    //transition: width .3s;
+}
+
+.active-2 {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+
+}
+
+.active-2::after {
+    content: '';
+    display: block;
+    /*width: 0;*/
+    height: 2px;
+    background: white;
+    margin-top: 18px;
+    transition: width .3s;
+}
+
+.active-2:hover::after {
+    width: 100%;
+    //transition: width .3s;
+}
+
+
+.font-color-title {
+  color:#E65100;
+}
+
+.height-navbar {
+  height: 80px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.category:hover {
+    background-color: #E65100;
+}
+
+.w3-hover-theme{color:#fff !important; background-color:#e65100 !important}
+
+.border-line-top {
+    border-top: 1px solid black;
 }
 </style>

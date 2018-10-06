@@ -2,12 +2,15 @@
   <div class="show">
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
-      <div class="w3-bar w3-black w3-wide w3-padding w3-card menu">
-        <router-link to="/"><a class="w3-bar-item w3-button no-underline"><b>DRY SEED</b></a></router-link>
+      <div class="w3-bar w3-black w3-padding w3-card menu">
+        <div class="height-navbar">
+         <router-link to="/"><a class="w3-button w3-bar-item no-underline margin-top-navbar w3-hover-black cool-link-2">DRY SEED
+         </a></router-link>
         <!-- Float links to the right. Hide them on small screens -->
-        <div class="w3-right w3-hide-small">
-          <router-link to="/projects"><a class="w3-bar-item w3-button">PROJECTS</a></router-link>
-          <router-link to="/about"><a class="w3-bar-item w3-button">ABOUT</a></router-link>
+         <div class="w3-right w3-hide-small">
+          <router-link to="/"><a class="w3-button w3-bar-item margin-top-navbar w3-hover-black"><span class="active-2">PROJECTS</span></a></router-link>
+          <router-link to="/about"><a class="w3-button w3-bar-item margin-top-navbar cool-link-2 w3-hover-black">ABOUT</a></router-link>
+         </div>
         </div>
       </div>
     </div>
@@ -17,10 +20,11 @@
       <div class="w3-row-padding modif-padding">
       <div class="w3-half w3-container">
         <img src="../assets/Ceremony-Coffee-Roasters-thumb.png" alt="House" style="width:60%">
-        <h3 class="w3-text-grey w3-large"><a href="#about"><span class="body-18px">See in full size</span></a></h3>
+        <h3 class="w3-text-grey w3-large"><a href="#about"><span class="body-18px link-color">See in full size</span></a></h3>
       </div>
       <div class="w3-col l4 w3-container w3-xlarge w3-text-grey w3-left-align">
-        <h3 class="w3-text-black"><span class="headline-normal">{{ users[0].name}}</span></h3>
+        <span class="w3-text-black headline-normal">{{ users[0].name}}</span><br>
+        <a href="#about"><span class="caption link-color-visit">Visit Website</span></a><br>
         <span class="body-18px">{{description_1}}</span>
         <br>
         <br>
@@ -30,25 +34,26 @@
 
       <!-- Project Section -->
       <div class="w3-container w3-padding-16 w3-left menu">
-        <button class="w3-button w3-black box-radius">ALL</button>
-        <button class="w3-button w3-white w3-margin-right box-radius">F&B</button>
-        <button class="w3-button w3-white w3-hide-small w3-margin-right box-radius">SAAS</button>
-        <button class="w3-button w3-white w3-hide-small w3-margin-right box-radius">FURNITURE</button>
+        <button class="w3-button box-radius w3-hover-theme">ALL</button>
+        <button class="w3-button w3-margin-right box-radius underline w3-hover-white">F&B</button>
+        <button class="w3-button w3-hide-small w3-margin-right box-radius underline w3-hover-white">SAAS</button>
+        <button class="w3-button w3-hide-small w3-margin-right box-radius underline w3-hover-white">FURNITURE</button>
         <!-- <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projects</h3> -->
       </div>
+
 
       <div class="w3-row-padding">
         <div class="w3-col l4 m6 w3-margin-bottom" v-for="user in users" :key="user.id">
           <div class="w3-display-container">
             <!-- <div class="w3-display-topleft w3-black w3-padding">Summer House</div> -->
-            <img :src="require(`../assets/${user.url}`)" alt="House" style="width:100%">
-            <span class="body-18px">{{ user.name}}</span>
+            <router-link to="/projects"><img :src="require(`../assets/${user.url}`)" alt="House" style="width:100%" class="w3-hover-opacity border-line-top"></router-link>
+            <div class="w3-padding-16"><span class="body-18px">{{ user.name}}</span></div>
           </div>
         </div>
      </div>
  <!-- End page content -->
     </div>
-    <footer class="w3-center w3-light-grey w3-padding-32" id="about">
+    <footer class="w3-center w3-white w3-padding-64 border-line-top" id="about">
       <span class="caption">2018 Dryseed</span>
     </footer>
 
@@ -94,10 +99,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .modif-padding {
-  padding: 50px 50px;
+  padding: 150px 50px;
 }
 
-.no-underline {
-  text-decoration: none;
+.height-navbar {
+  height: 80px;
+}
+
+.margin-top-navbar{
+  padding-top: 25px;
+}
+
+.link-color{
+  color: #E65100;
+}
+
+.link-color-visit{
+  color: #9E9E9E;
+}
+
+
+.color-font{
+  color: #000000;
 }
 </style>
